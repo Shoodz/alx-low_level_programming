@@ -1,23 +1,32 @@
-#include "main.h"
+#include <stdio.h>
 
 
 /**
- * main - check the code.
- *
- * Return: Always 0.
-*/
+  * main - prints the first 52 fib
+  * Return: 0.
+  */
 
 
 int main(void)
 {
-	int sum, num;
+	int i = 0;
+	long j = 1, k = 2;
 
-	for  (num = 0; num < 1024; num++)
+
+	while (i < 50)
 	{
-		if ((num % 3 == 0) || (num % 5 == 0))
-			sum += num;
+	if (i == 0)
+	printf("%ld", j);
+	else if (i == 1)
+	printf(", %ld", k);
+	else
+	{
+	k += j;
+	j = k - j;
+	printf(", %ld", k);
 	}
-	printf("%d\n", sum);
-
+	++i;
+	}
+	printf("\n");
 	return (0);
 }
