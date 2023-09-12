@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * print_alphabet - prints the alphabet in lowercase with nexw line at the end
+ * print_alphabet - utilizes on the _putchar function to print the alphabet a - z
  */
 
 void print_alphabet(void)
 {
-	char alpha;
+	int ch;
 
-	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		_putchar(alpha);
+		_putchar(ch);
 	}
 	_putchar('\n');
 }
