@@ -10,5 +10,5 @@ int add(int a, int b)
 {
 	int sum = a + b;
 	
-	return (a + b);
+	return (sum);
 }
