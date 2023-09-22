@@ -17,15 +17,15 @@ char *_strncat(char *dest, char *src, int n);
 	c = 0;
 
 	/*find size of dest array*/
-	while (dest[c])
-		c++;
+	while (dest[c++])
+		i++;
 
 	/**
 	 * src does not need to be null trminated
 	 * if it contains n or more bytes
 	*/
-	for (i = 0; i < n && src[i]; i++)
-		dest[c++] = scr[i];
+	for (c = 0; src[c] && c < n; c++)
+		dest[i++] = scr[c];
 
 	return (dest);
 }
