@@ -8,18 +8,23 @@
  * Return: unsigned int.
  */
 
-char *_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int itr, jtr;
+	int z = 0, x, y;
 
-	for (itr = 0; s[itr] != '\0'; itr++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		for (jtr = 0; accept[jtr] != s[itr]; jtr++)
+		if (s[x] != 32)
 		{
-			if (accept[jtr] == '\0')
-				return (itr);
+			for (y = 0; accept[y] != '\0'; y++)
+			{
+				if (s[x] == accept[y])
+					z++;
+			}
 		}
+		else
+			return (z);
 	}
+		return (z);
 
-	return (itr);
 }
