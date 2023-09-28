@@ -2,15 +2,15 @@
 
 /**
  * _puts_recursion - prints a string, followed by a new line
- * @a: string to print
+ * @s: string to print
  */
-void _puts_recursion(char *a)
+void _puts_recursion(char *s)
 {
-	if (*a == '\0')
+	if (*s == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
-	_putchar(*a);
+	_putchar(*s);
 	_puts_recursion(s + 1);
 }
